@@ -52,7 +52,11 @@ let emptyArea = document.getElementById("emptyarea");
 // toggle menu by clicking on hamburger
 function hamburgerMenu() {
     document.body.classList.toggle("stopscrolling");
- document.getElementById("mobiletogglemenu").classList.toggle("show-toggle-menu");
+ const menu = document.getElementById("mobiletogglemenu");
+ const isOpen = menu.classList.toggle("show-toggle-menu");
+ menu.setAttribute("aria-hidden", String(!isOpen));
+ menu.inert = !isOpen;
+ document.getElementById("hamburger-button").setAttribute("aria-expanded", String(isOpen));
 document.getElementById("burger-bar1").classList.toggle("hamburger-animation1");
 document.getElementById("burger-bar2").classList.toggle("hamburger-animation2");
 document.getElementById("burger-bar3").classList.toggle("hamburger-animation3");
@@ -61,14 +65,24 @@ document.getElementById("burger-bar3").classList.toggle("hamburger-animation3");
 function hidemenubyli(){
 document.body.classList.toggle("stopscrolling");
 document.getElementById("mobiletogglemenu").classList.remove("show-toggle-menu");
+document.getElementById("mobiletogglemenu").setAttribute("aria-hidden", "true");
+document.getElementById("mobiletogglemenu").inert = true;
+document.getElementById("hamburger-button").setAttribute("aria-expanded", "false");
 document.getElementById("burger-bar1").classList.remove("hamburger-animation1");
 document.getElementById("burger-bar2").classList.remove("hamburger-animation2");
 document.getElementById("burger-bar3").classList.remove("hamburger-animation3");
 }
 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && document.getElementById("mobiletogglemenu").classList.contains("show-toggle-menu")) {
+    hidemenubyli();
+    document.getElementById("hamburger-button").focus();
+  }
+});
+
 const sections = document.querySelectorAll('section');
-const navLi = document.querySelectorAll('.navbar .navbar-tabs .navbar-tabs-ul a li');
-const mobilenavLi = document.querySelectorAll('.mobiletogglemenu .mobile-navbar-tabs-ul a li');
+const navLi = document.querySelectorAll('.navbar .navbar-tabs .navbar-tabs-ul li');
+const mobilenavLi = document.querySelectorAll('.mobiletogglemenu .mobile-navbar-tabs-ul li');
 
 window.addEventListener('scroll', ()=>{
   let current = "";

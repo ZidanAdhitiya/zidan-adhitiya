@@ -7,9 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#000" />
+  <meta name="description" content="Zidan Adhitiya is an Information Systems graduate working across data analysis, administrative operations, production management, and web development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Zidan Adhitiya | Admin &amp; Data Analyst" />
+  <meta property="og:description" content="Data • Operations • Technology" />
+  <meta property="og:url" content="https://zidanadhitiya.github.io/zidan-adhitiya/" />
+  <meta property="og:image" content="https://zidanadhitiya.github.io/zidan-adhitiya/src/webp/adhitiya.png" />
+  <link rel="canonical" href="https://zidanadhitiya.github.io/zidan-adhitiya/" />
 
   <title>Zidan Adhitiya | Admin & Data Analyst Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="src/jpg/morty.jpg" />
+  <link rel="icon" type="image/png" href="src/png/favicon.png" />
   <!-- aos cdn -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- stylesheet -->
@@ -26,7 +33,7 @@
 </head>
 
 <body class="body">
-  <audio loop="" id="audioPlayer" style="display: none">
+  <audio loop="" preload="none" id="audioPlayer" style="display: none">
     <source src="src/mp3/preloader.mp3" type="audio/mp3" />
   </audio>
   <div id="preloader"></div>
@@ -38,38 +45,29 @@
 
     <div class="navbar" id="navbar">
       <div class="hey">Hey!</div>
-      <div class="logo" tabindex="0" aria-label="vinod jangid logo">
+      <div class="logo" aria-label="Zidan Adhitiya">
         <div class="logo-top">
-          <img src="src/png/morty.png" alt="animation-head" />
+          <img src="src/png/morty.png" alt="Portfolio mascot" />
         </div>
       </div>
       <div class="navbar-tabs" id="navbar-tabs">
         <ul class="navbar-tabs-ul">
-          <a href="#home" tabindex="0" aria-label="Home menu button">
-            <li class="home activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
+          <li class="home activeThistab navbar-tabs-li" data-aos="fade-down" data-aos-delay="100"><a href="#home" tabindex="0" aria-label="Home menu button">
               &#60;/Home&#62;
-            </li>
-          </a>
-          <a href="#about" aria-label="about menu button">
-            <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
+            </a></li>
+          <li class="about navbar-tabs-li" data-aos="fade-down" data-aos-delay="300"><a href="#about" aria-label="about menu button">
               &#60;/AboutMe&#62;
-            </li>
-          </a>
-          <a href="#skills" aria-label="skills menu button">
-            <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
+            </a></li>
+          <li class="experience"><a href="#experience" aria-label="experience menu button">&lt;/Experience&gt;</a></li>
+          <li class="skills navbar-tabs-li" data-aos="fade-down" data-aos-delay="500"><a href="#skills" aria-label="skills menu button">
               &#60;/Skills&#62;
-            </li>
-          </a>
-          <a href="#creative" aria-label="creative menu button">
-            <li class="creative" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="600">
+            </a></li>
+          <li class="creative navbar-tabs-li" data-aos="fade-down" data-aos-delay="600"><a href="#creative" aria-label="creative menu button">
               &#60;/Creative&#62;
-            </li>
-          </a>
-          <a href="#projects" aria-label="projects menu button">
-            <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+            </a></li>
+          <li class="projects navbar-tabs-li" data-aos="fade-down" data-aos-delay="700"><a href="#projects" aria-label="projects menu button">
               &#60;/Projects&#62;
-            </li>
-          </a>
+            </a></li>
         </ul>
       </div>
       <!-- navbar tabs ends -->
@@ -81,7 +79,7 @@
     <!-- hamburger -->
     <div class="hamburger" id="hamburger" data-aos="fade">
       <div class="hamburgerbase">
-        <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
+        <button id="hamburger-button" type="button" onclick="hamburgerMenu()" aria-expanded="false" aria-controls="mobiletogglemenu" aria-label="Toggle navigation menu">
           <span class="burger-bar" id="burger-bar1"></span>
           <span class="burger-bar" id="burger-bar2"></span>
           <span class="burger-bar" id="burger-bar3"></span>
@@ -89,33 +87,24 @@
       </div>
     </div>
     <!-- hamburger -->
-    <div class="mobiletogglemenu" id="mobiletogglemenu">
+    <div class="mobiletogglemenu" id="mobiletogglemenu" aria-hidden="true" inert>
       <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
-        <a href="#home" tabindex="0" aria-label="Home menu button">
-          <li id="home-mobile-tab" class="mobile-navbar-tabs-li home activeThismobiletab" onclick="hidemenubyli()">
+        <li id="home-mobile-tab" class="mobile-navbar-tabs-li home activeThismobiletab" onclick="hidemenubyli()"><a href="#home" tabindex="0" aria-label="Home menu button">
             &#60;/Home&#62;
-          </li>
-        </a>
-        <a href="#about" tabindex="0" aria-label="about menu button">
-          <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
+          </a></li>
+        <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()"><a href="#about" tabindex="0" aria-label="about menu button">
             &#60;/AboutMe&#62;
-          </li>
-        </a>
-        <a href="#skills" tabindex="0" aria-label="skills menu button">
-          <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
+          </a></li>
+        <li class="mobile-navbar-tabs-li experience" onclick="hidemenubyli()"><a href="#experience" tabindex="0" aria-label="experience menu button">&lt;/Experience&gt;</a></li>
+        <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()"><a href="#skills" tabindex="0" aria-label="skills menu button">
             &#60;/Skills&#62;
-          </li>
-        </a>
-        <a href="#creative" tabindex="0" aria-label="creative menu button">
-          <li id="creative-mobile-tab" class="mobile-navbar-tabs-li creative" onclick="hidemenubyli()">
+          </a></li>
+        <li id="creative-mobile-tab" class="mobile-navbar-tabs-li creative" onclick="hidemenubyli()"><a href="#creative" tabindex="0" aria-label="creative menu button">
             &#60;/Creative&#62;
-          </li>
-        </a>
-        <a href="#projects" tabindex="0" aria-label="projects menu button">
-          <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
+          </a></li>
+        <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()"><a href="#projects" tabindex="0" aria-label="projects menu button">
             &#60;/Projects&#62;
-          </li>
-        </a>
+          </a></li>
       </ul>
     </div>
     <!-- mobile toggle menu ends -->
@@ -139,22 +128,22 @@
           <p class="jello">'</p>
           <p class="jello">m</p>
         </article>
-        <article id="name" data-aos="fade-up" data-aos-delay="200">
-          <p class="jello">Z</p>
-          <p class="jello">i</p>
-          <p class="jello">d</p>
-          <p class="jello">a</p>
-          <p class="jello">n</p>
+        <h1 id="name" data-aos="fade-up" data-aos-delay="200">
+          <span class="jello">Z</span>
+          <span class="jello">i</span>
+          <span class="jello">d</span>
+          <span class="jello">a</span>
+          <span class="jello">n</span>
           &nbsp;
-          <p class="jello">A</p>
-          <p class="jello">d</p>
-          <p class="jello">h</p>
-          <p class="jello">i</p>
-          <p class="jello">t</p>
-          <p class="jello">i</p>
-          <p class="jello">y</p>
-          <p class="jello">a</p>
-        </article>
+          <span class="jello">A</span>
+          <span class="jello">d</span>
+          <span class="jello">h</span>
+          <span class="jello">i</span>
+          <span class="jello">t</span>
+          <span class="jello">i</span>
+          <span class="jello">y</span>
+          <span class="jello">a</span>
+        </h1>
 
         <article id="work" data-aos="fade-up" data-aos-delay="400">
           <div>
@@ -184,17 +173,14 @@
           </div>
         </article>
         <p id="info-para" data-aos="fade-up" data-aos-delay="600">
-          I'm an Admin & Data Analyst studying Computer Software at vocational school (2022-2026).
-          I turn raw data into clear, actionable insights using Excel, SQL, and Power BI,
-          while also leveraging Python for data automation and deeper analysis.
-          Organized, detail-oriented, and passionate about making data tell a story.
+          I am an Information Systems graduate with experience in data analysis, administrative operations, production management, and team leadership. Through my internship and professional experience, I have developed skills in data processing, reporting, inventory management, production planning, and quality control. I am detail-oriented, adaptable, and capable of coordinating teams while ensuring efficient and accurate operations.
         </p>
+        <p class="hero-tagline">Data <span>•</span> Operations <span>•</span> Technology</p>
         <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
-          <a href="https://wa.me/6289692373366" target="_blank" tabindex="-1">
-            <button class="letsTalkBtn">
-              <p class="letsTalkBtn-text">Let's Talk!</p>
-              <span class="letsTalkBtn-BG"></span>
-            </button></a>
+          <a href="https://wa.me/6289692373366" target="_blank" rel="noopener noreferrer" class="letsTalkBtn">
+            <span class="letsTalkBtn-text">Let's Talk!</span>
+            <span class="letsTalkBtn-BG"></span>
+          </a>
           <div class="setting-container" id="setting-container">
             <input type="checkbox" id="switchforsetting" onclick="settingtoggle()" />
 
@@ -217,103 +203,98 @@
         </div>
         <!-- contact-btn-div -->
       </div>
-      <!-- Resume button -->
-      <button class="resume-btn" id="resume-btn" onclick="openURL()">
-        <div class="sign">
-          <svg viewBox="0 0 640 512">
-            <path
-              d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
-          </svg>
-        </div>
-
-        <div class="text">Resume</div>
-      </button>
     </section>
     <!-- landing page ends here -->
     <section class="about-section-container" id="about" data-aos="fade-up">
       <div class="about-section">
         <div class="section-heading">
-          <article class="section-heading-article" tabindex="0" aria-label="About me heading">
+          <h2 class="section-heading-article" tabindex="0" aria-label="About me heading">
             &#60;/AboutMe&#62;
-          </article>
+          </h2>
           <p class="sectionHeadingP"></p>
         </div>
 
         <div class="info-dp-section">
           <div class="about-info">
             <p tabindex="0">
-              Hey ya! I'm Zidan Adhitiya from Indonesia, currently pursuing
-              Computer Software at vocational school (2022-2026). My passion lies
-              in organizing, analyzing, and presenting data in a clear and meaningful way.
+              I am an Information Systems graduate from Indonesia with hands-on experience in data analysis, administration, and production operations.
             </p>
             <br />
             <p tabindex="0">
-              <strong>The Discovery:</strong> It all started with spreadsheets. I found myself
-              drawn to the way a well-structured Excel file could bring order to chaos, and how
-              a well-crafted chart could tell a story at a glance. From there, I explored SQL
-              databases, Power BI dashboards, and learned to appreciate the art of translating
-              raw numbers into decisions that actually matter.
+              <strong>The Discovery:</strong> Working with spreadsheets sparked my interest in how organized data can clarify day-to-day business decisions. I began exploring databases, reporting, and visualization to make information easier to use.
             </p>
             <br />
             <p tabindex="0">
-              <strong>The Evolution:</strong> I expanded my skill set beyond spreadsheets into
-              database querying with SQL, interactive dashboards with Power BI, and workflow
-              automation using Python. I started working on real client projects — from scraping
-              and organizing large datasets to building structured reports and data pipelines.
-              Every project sharpened my eye for detail and my ability to deliver clean,
-              reliable data.
+              <strong>The Evolution:</strong> An internship and practical projects helped me apply Excel, SQL, and Python to customer data, cleaning, and reporting, while also contributing to web development. I have since developed experience in production planning, inventory control, and quality checks.
             </p>
             <br />
             <p tabindex="0">
-              <strong>Today:</strong> I focus on being an effective Admin & Data Analyst —
-              someone who can manage data end-to-end: from collecting and cleaning it, to
-              analyzing trends and presenting insights through compelling visualizations.
-              With a strong foundation in Excel and growing expertise in SQL, Power BI, and
-              Python, I aim to help organizations make smarter, data-driven decisions.
+              <strong>Today:</strong> I work across data and business operations: organizing information, supporting reliable processes, and coordinating people and production tasks. I remain interested in practical software tools that solve real workflow problems.
             </p>
           </div>
 
           <div class="dp" data-aos="fade-up">
-            <img src="src/webp/adhitiya.png" alt="Zidan Adhitiya" tabindex="0" aria-label="image of zidan" />
+            <img src="src/webp/adhitiya.png" alt="Portrait of Zidan Adhitiya" loading="lazy" />
           </div>
         </div>
       </div>
     </section>
     <!-- about section ends  -->
 
+    <section class="experience-section-container" id="experience">
+      <div class="experience-section">
+        <div class="section-heading"><h2 class="section-heading-article">&lt;/Experience&gt;</h2><p class="sectionHeadingP"></p></div>
+        <div class="experience-list">
+          <article class="experience-card">
+            <div class="experience-heading"><div><h3>Production Administration, Inventory Control &amp; Quality Control</h3><p>PT Bangun Indopralon Sukses</p></div><span>Professional Experience</span></div>
+            <p class="experience-summary">I led production teams, planned daily manufacturing activities, managed over 100 inventory items, coordinated workforce allocation, monitored production operations, and performed quality inspections to ensure product standards.</p>
+            <ul><li>Led and coordinated production personnel.</li><li>Prepared daily production plans and workforce allocations.</li><li>Managed inventory consisting of 100+ production-related items.</li><li>Monitored daily manufacturing and production activities.</li><li>Conducted quality inspections on manufactured tanks.</li><li>Coordinated production requirements with relevant operational departments.</li></ul>
+          </article>
+          <article class="experience-card">
+            <div class="experience-heading"><div><h3>Data Analysis &amp; Web Development Intern</h3><p>Astacode</p></div><span>Internship</span></div>
+            <p class="experience-summary">During my internship at Astacode, I analyzed and managed customer data using Excel, Python, and SQL, supported daily operations, and contributed to web development using Laravel and PHP.</p>
+            <ul><li>Analyzed customer data and prepared cleaned, structured reports.</li><li>Used Excel, Python, and SQL for data processing and management.</li><li>Supported structured data management and daily operations.</li><li>Contributed to web development using Laravel and PHP.</li><li>Collaborated with the team on assigned work.</li></ul>
+          </article>
+        </div>
+        <div class="education-note"><h3>Education</h3><p>Information Systems — Graduate</p></div>
+      </div>
+    </section>
+
     <section class="skills-section-container" id="skills">
       <div class="skills-section">
         <div class="section-heading" data-aos="fade-up">
-          <article class="section-heading-article" tabindex="0" aria-label="skills heading">
+          <h2 class="section-heading-article" tabindex="0" aria-label="skills heading">
             &#60;/Skills&#62;
-          </article>
+          </h2>
           <p class="sectionHeadingP"></p>
         </div>
 
         <div class="frontend-dev-section">
-          <div class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
-            aria-label="As a data analyst these are the tools and technologies I work with">
-            Admin &amp; Data Analyst Stack
+          <div class="frontend-dev-heading" data-aos="fade-up">Skills</div>
+          <div class="skill-groups">
+            <article class="skill-group"><h3>Data &amp; Analytics</h3><p>Microsoft Excel &#183; SQL &#183; Python &#183; Power BI &#183; Jupyter Notebook &#183; Data Cleaning &#183; Data Reporting</p></article>
+            <article class="skill-group"><h3>Administration &amp; Operations</h3><p>Production Planning &#183; Inventory Management &#183; Administrative Operations &#183; Quality Control &#183; Operational Coordination &#183; Team Leadership</p></article>
+            <article class="skill-group"><h3>Development &amp; Technology</h3><p>PHP &#183; Laravel &#183; Java &#183; Kotlin &#183; Web Development</p></article>
           </div>
           <div class="tech-stack-wrapper">
             <div class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/excel.png" alt="Microsoft Excel" class="tech-stack-logo" />
+              <img src="./src/png/excel.png" loading="lazy" alt="Microsoft Excel" class="tech-stack-logo" />
             </div>
 
             <div class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/powerbi.svg" alt="Power BI" class="tech-stack-logo" />
+              <img src="./src/png/powerbi.svg" loading="lazy" alt="Power BI" class="tech-stack-logo" />
             </div>
 
             <div class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/sql.svg" alt="SQL" class="tech-stack-logo" />
+              <img src="./src/png/sql.svg" loading="lazy" alt="SQL" class="tech-stack-logo" />
             </div>
 
             <div class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/python.png" alt="Python" class="tech-stack-logo" />
+              <img src="./src/png/python.png" loading="lazy" alt="Python" class="tech-stack-logo" />
             </div>
 
             <div class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/jupyter.png" alt="Jupyter Notebook" class="tech-stack-logo" />
+              <img src="./src/png/jupyter.png" loading="lazy" alt="Jupyter Notebook" class="tech-stack-logo" />
             </div>
           </div>
         </div>
@@ -325,9 +306,9 @@
     <section class="creative-section-container" id="creative">
       <div class="creative-section">
         <div class="section-heading" data-aos="fade-up">
-          <article class="section-heading-article" tabindex="0" aria-label="Creative Industry experience heading">
+          <h2 class="section-heading-article" tabindex="0" aria-label="Creative Industry experience heading">
             &#60;/Creative&#62;
-          </article>
+          </h2>
           <p class="sectionHeadingP"></p>
         </div>
 
@@ -355,13 +336,13 @@
                 <span class="creative-tag">Vector Design</span>
               </div>
               <a href="https://dribbble.com/Adhitiya_Zidan" target="_blank" rel="noopener noreferrer" class="creative-link" tabindex="0" aria-label="View logo portfolio on Dribbble">
-                <button class="cta">
+                <span class="cta">
                   <span>View on Dribbble</span>
                   <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
                   </svg>
-                </button>
+                </span>
               </a>
             </div>
             <div class="creative-card-glow creative-card-glow-pink"></div>
@@ -385,13 +366,13 @@
                 <span class="creative-tag">Content Creation</span>
               </div>
               <a href="https://www.youtube.com/@HowNowUKnow" target="_blank" rel="noopener noreferrer" class="creative-link" tabindex="0" aria-label="View YouTube channel HowNowUKnow">
-                <button class="cta">
+                <span class="cta">
                   <span>Visit Channel</span>
                   <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
                   </svg>
-                </button>
+                </span>
               </a>
             </div>
             <div class="creative-card-glow creative-card-glow-blue"></div>
@@ -405,45 +386,46 @@
     <section class="projects-section-container" id="projects">
       <div class="projects-section-div">
         <div class="section-heading" data-aos="fade-up">
-          <article class="section-heading-article" tabindex="0" aria-label="My projects starts from here">
+          <h2 class="section-heading-article" tabindex="0" aria-label="My projects starts from here">
             &#60;/Projects&#62;
-          </article>
+          </h3>
           <p class="sectionHeadingP"></p>
         </div>
         <div class="project-boxes-div">
+          <h3 class="project-category">Blockchain &amp; Technology</h3>
           <!-- Kerly AI Project -->
           <a href="https://www.figma.com/design/pwUXSZOepJZhpAI1enQyJh/Kerly-AI?node-id=7-32&t=uUertFFOVR0ham2L-0"
-            target="_blank" data-aos="fade-up">
+            target="_blank" rel="noopener noreferrer" data-aos="fade-up">
             <div class="project-box project-box1" id="project-box1">
               <div class="info-div">
                 <img src="src/svg/aquaregia-favicon.svg" alt="" class="faviconforProject" />
-                <article class="ProjectHeading">Kerly AI</article>
+                <h3 class="ProjectHeading">Kerly AI</h3>
                 <p class="ProjectDescription">
                   AI-powered health specialist mobile app that supports comprehensive medical
                   check-ups directly through the application. Powered by Binah AI for health
                   monitoring and fine-tuned with GCP Vertex AI. Initially developed for a
                   competition, now under active development for enhanced user experience.
                 </p>
-                <button class="cta">
+                <span class="cta">
                   <span>See Figma UI Design</span>
                   <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
                   </svg>
-                </button>
+                </span>
               </div>
               <div class="image-div">
-                <img src="src/jpg/kerly-ai.jpg" alt="" />
+                <img src="src/jpg/kerly-ai.jpg" alt="Kerly AI mobile app design preview" loading="lazy" />
               </div>
             </div>
           </a>
 
           <!-- AI Image Verification Project -->
-          <a href="" target="_blank" data-aos="fade-up">
+          <div class="project-card-unlinked" data-aos="fade-up">
             <div class="project-box project-box3" id="project-box3">
               <div class="info-div">
                 <img src="src/svg/aquaregia-favicon.svg" alt="" class="faviconforProject" />
-                <article class="ProjectHeading">Verifly</article>
+                <h3 class="ProjectHeading">Verifly</h3>
                 <p class="ProjectDescription">
                   Advanced authenticity detection system for images and videos using dual
                   verification: metadata analysis and AI-powered pixel verification. Each
@@ -451,149 +433,143 @@
                   L2 Ethereum network. Anyone can verify image authenticity by matching
                   the code with the preview. Currently under development.
                 </p>
-                <button class="cta">
+                <span class="cta">
                   <span>Coming Soon</span>
                   <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
                   </svg>
-                </button>
+                </span>
               </div>
               <div class="image-div">
-                <img src="src/jpg/ai-verifier.jpg" alt="" />
+                <img src="src/jpg/ai-verifier.jpg" alt="Verifly image verification interface preview" loading="lazy" />
               </div>
             </div>
-          </a>
+          </div>
 
+<div class="project-card-unlinked" data-aos="fade-up">
+            <div class="project-box project-box5" id="project-box5">
+              <div class="info-div">
+                <img src="src/png/traddding.png" alt="" class="faviconforProject" />
+                <h3 class="ProjectHeading">Traddding</h3>
+                <p class="ProjectDescription">
+                  A trading community created with two friends, with an original aim of connecting traders in Tasikmalaya.
+                </p>
+                <span class="cta">
+                  <span>See the Community Details (Coming Soon)</span>
+                  <svg viewBox="0 0 13 10" height="10px" width="15px">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </span>
+              </div>
+              <div class="image-div">
+                <img src="src/jpg/traddding.png" alt="Traddding community visual" loading="lazy" />
+              </div>
+            </div>
+          </div>
+
+          <h3 class="project-category">Data Analytics &amp; Research</h3>
           <!-- Baseball Coach Scraping Project -->
           <a href="https://docs.google.com/spreadsheets/d/1n19uLBZca-EzL_xmH1qcANG2WwcD_du0/edit?usp=sharing&ouid=100723553960676457543&rtpof=true&sd=true"
-            target="_blank" data-aos="fade-up">
+            target="_blank" rel="noopener noreferrer" data-aos="fade-up">
             <div class="project-box project-box6" id="project-box6">
               <div class="info-div">
                 <img src="src/svg/aquaregia-favicon.svg" alt="" class="faviconforProject" />
-                <article class="ProjectHeading">Baseball Coach Data Scraping</article>
+                <h3 class="ProjectHeading">Baseball Coach Data Scraping</h3>
                 <p class="ProjectDescription">
                   Client project: Comprehensive data scraping system that collected detailed
                   information of hundreds of baseball coaches from various universities across
                   the United States. Automated data extraction, validation, and organization
                   into structured datasets for client analysis and outreach purposes.
                 </p>
-                <button class="cta">
+                <span class="cta">
                   <span>View Data Results</span>
                   <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
                   </svg>
-                </button>
+                </span>
               </div>
               <div class="image-div">
-                <img src="src/jpg/baseball-scraping.jpg" alt="" />
+                <img src="src/jpg/baseball-scraping.jpg" alt="Baseball coach data scraping project preview" loading="lazy" />
               </div>
             </div>
           </a>
 
-          <a href="https://drive.google.com/file/d/15NN0iCNcuP8BKx9pwchDw8DxZVGM1CDu/view?usp=sharing" target="_blank"
+          <h3 class="project-category">Software &amp; Web Development</h3>
+
+          <a href="https://drive.google.com/file/d/15NN0iCNcuP8BKx9pwchDw8DxZVGM1CDu/view?usp=sharing" target="_blank" rel="noopener noreferrer"
             data-aos="fade-up">
-            <div class="project-box project-box2" id="project-box2">
+            <div class="project-box project-box2" id="project-box-vidiktif">
               <div class="info-div">
-                <img src="src/jpg/vidiktiflogo.png" alt="" class="faviconforProject" />
-                <article class="ProjectHeading">Vidiktif</article>
+                <img src="src/jpg/vidiktiflogo.png" alt="Vidiktif library platform logo" class="faviconforProject" />
+                <h3 class="ProjectHeading">Vidiktif</h3>
                 <p class="ProjectDescription">
                   A Book Library Platform that provided a wide selection of
                   books from partner authors and public domain books (this
                   platform is now defunct)
                 </p>
-                <button class="cta">
+                <span class="cta">
                   <span>See The Platform Footage</span>
                   <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
                   </svg>
-                </button>
+                </span>
               </div>
               <div class="image-div">
-                <img src="src/jpg/vidiktif.jpg" alt="" />
-              </div>
-            </div>
-          </a>
-
-          <a href="" target="_blank" data-aos="fade-up">
-            <div class="project-box project-box5" id="project-box5">
-              <div class="info-div">
-                <img src="src/png/traddding.png" alt="" class="faviconforProject" />
-                <article class="ProjectHeading">Traddding</article>
-                <p class="ProjectDescription">
-                  Traddding is a community of traders that I and 2 of my
-                  friends created, this community was just created when I
-                  added this portfolio, it was recorded that this community
-                  was only 5 days old, the target plan for this community is
-                  to make it the largest crypto community in the city where I
-                  live, namely Tasikmalaya.
-                </p>
-                <button class="cta">
-                  <span>See the Community Details (Coming Soon)</span>
-                  <svg viewBox="0 0 13 10" height="10px" width="15px">
-                    <path d="M1,5 L11,5"></path>
-                    <polyline points="8 1 12 5 8 9"></polyline>
-                  </svg>
-                </button>
-              </div>
-              <div class="image-div">
-                <img src="src/jpg/traddding.png" alt="" />
+                <img src="src/jpg/vidiktif.jpg" alt="Vidiktif library platform preview" loading="lazy" />
               </div>
             </div>
           </a>
 
           <!-- ---------------------- -->
-          <a href="https://desershi.000webhostapp.com/index.php" target="_blank" data-aos="fade-up">
+          <div class="project-card-unlinked" data-aos="fade-up">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
                 <img src="src/svg/aquaregia-favicon.svg" alt="" class="faviconforProjectAquaregia" />
-                <article class="ProjectHeading">Desersi</article>
+                <h3 class="ProjectHeading">Desersi</h3>
                 <p class="ProjectDescription">
-                  Attendance website created for my vocational school, this is
-                  a project requested by my principal as a solution to one of
-                  the problems found in my school.
+                  Attendance website built for my vocational school at the request of the principal to address an attendance tracking problem. The previous demo used 000webhost, which has shut down; source code is not included in this portfolio.
                 </p>
-                <button class="cta">
-                  <span>See the Live Site</span>
+                <span class="cta">
+                  <span>Previous demo unavailable</span>
                   <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
                   </svg>
-                </button>
+                </span>
               </div>
               <div class="image-div">
-                <img src="src/jpg/desersi.png" alt="" />
+                <img src="src/jpg/desersi.png" alt="Desersi attendance website preview" loading="lazy" />
               </div>
             </div>
-          </a>
+          </div>
           <!-- ---------------------- -->
-          <a href="" target="_blank" data-aos="fade-up">
+          <div class="project-card-unlinked" data-aos="fade-up">
             <div class="project-box project-box4" id="project-box4">
               <div class="info-div">
                 <img src="src/svg/aquaregia-favicon.svg" alt="" class="faviconforProject" />
-                <article class="ProjectHeading">Nebeng</article>
+                <h3 class="ProjectHeading">Nebeng</h3>
                 <p class="ProjectDescription">
-                  Is a mega project that I am currently running together with
-                  a friend of mine, this is an application-based project that
-                  is built with a business orientation, broadly speaking this
-                  is a project in the realm of transportation like Uber but
-                  with different innovations.
+                  A business-oriented transportation application concept developed with a friend. The proposal describes a ride-hailing service with a different approach; further details are not listed here.
                 </p>
-                <button class="cta">
+                <span class="cta">
                   <span>See the Business Proposal (Coming Soon)</span>
                   <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
                   </svg>
-                </button>
+                </span>
               </div>
               <div class="image-div">
-                <img src="src/jpg/proses.jpg" alt="" />
+                <img src="src/jpg/proses.jpg" alt="Nebeng transportation concept preview" loading="lazy" />
               </div>
             </div>
-          </a>
+          </div>
+          <h3 class="project-category">Creative &amp; Design</h3>
+          <p class="project-category-note">Logo design and video work are featured in the Creative section above.</p>
           <!-- ---------------------- -->
         </div>
       </div>
@@ -620,25 +596,25 @@
             <article>GetinTouch();</article>
           </div>
           <div class="logos">
-            <a href="https://www.instagram.com/zidan_adhitiya/" target="_blank" tabindex="0"
+            <a href="https://www.instagram.com/zidan_adhitiya/" target="_blank" rel="noopener noreferrer" tabindex="0"
               aria-label="My instagram"><svg viewBox="0 0 448 512" class="SocialHandle">
                 <path
                   d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
               </svg></a>
 
-            <a href="https://www.linkedin.com/in/zidan-adhitiya/" target="_blank" aria-label="My Linkdin"><svg
+            <a href="https://www.linkedin.com/in/zidan-adhitiya/" target="_blank" rel="noopener noreferrer" aria-label="My Linkdin"><svg
                 class="SocialHandle" viewBox="0 0 448 512">
                 <path
                   d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
               </svg></a>
 
-            <a href="https://github.com/ZidanAdhitiya" target="_blank" aria-label="My github"><svg viewBox="0 0 496 512"
+            <a href="https://github.com/ZidanAdhitiya" target="_blank" rel="noopener noreferrer" aria-label="My github"><svg viewBox="0 0 496 512"
                 class="SocialHandle">
                 <path
                   d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
               </svg></a>
 
-            <a href="mailto:vjamaah2271@gmail.com" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
+            <a href="mailto:vjamaah2271@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="My G mail"><svg id="GmailLogo"
                 viewBox="0 0 512 512">
                 <path
                   d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
@@ -646,7 +622,7 @@
           </div>
         </div>
         <div class="footer-avatar-container">
-          <img src="src/png/morty.png" alt="animation-head" class="footer-avatar-img" />
+          <img src="src/png/morty.png" alt="Portfolio mascot" class="footer-avatar-img" />
           <div class="footer-avatar-face">
             <div class="footer-avatar-eye footer-left-eye">
               <div class="footer-pupil"></div>
@@ -659,7 +635,7 @@
         <div class="footer-bottom">
           <article>
             Zidan Adhitiya
-            <i class="far fa-copyright"></i> 2025
+            <i class="far fa-copyright"></i> 2026
           </article>
         </div>
       </div>
@@ -671,15 +647,7 @@
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
-  </script>
-
-  <script>
-    function openURL() {
-      var url = "src/pdf/CV.pdf";
-
-      window.open(url, "_blank");
-    }
+    if (window.AOS) AOS.init();
   </script>
 
   <script>

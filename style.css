@@ -1872,6 +1872,7 @@ footer {
   }
   .mobile-navbar-tabs-ul a {
     text-decoration: none;
+    color: inherit;
   }
   .mobile-navbar-tabs-li {
     text-align: center;
@@ -2130,3 +2131,44 @@ footer {
         justify-content: flex-start;
     }
   } */
+
+/* Portfolio refresh: accessible text, experience and skills */
+* { -webkit-user-select: text; user-select: text; }
+*::selection { background: #6bc5f8; color: #11111b; }
+:focus-visible { outline: 2px solid var(--color-light-blue); outline-offset: 4px; }
+.hero-tagline { margin-top: 1.2rem; color: var(--color-gray); font: 500 1.7rem "Fira Code", monospace; letter-spacing: .04em; }
+.hero-tagline span { color: var(--color-light-blue); }
+.experience-section-container { width: 100%; padding: 8rem 0 6rem; }
+.experience-section { width: 80%; max-width: 1100px; margin: 0 auto; }
+.experience-list { display: grid; gap: 2rem; margin-top: 3rem; }
+.experience-card, .education-note, .skill-group {
+  color: var(--color-white); background: var(--tech-stack-box-first-color);
+  border: 1px solid var(--tech-stack-box-border-color); border-radius: 12px;
+  padding: clamp(2rem, 4vw, 3.2rem);
+}
+.experience-heading { display:flex; justify-content:space-between; align-items:flex-start; gap:2rem; }
+.experience-heading h3, .education-note h3, .skill-group h3 { font-size:2rem; line-height:1.4; color:var(--color-white); }
+.experience-heading p { margin-top:.6rem; color:var(--color-light-blue); font-size:1.7rem; }
+.experience-heading span { color:var(--color-gray); font-size:1.35rem; white-space:nowrap; }
+.experience-summary, .experience-card li, .education-note p, .skill-group p { color:var(--color-gray); font-size:1.55rem; line-height:1.75; }
+.experience-summary { margin:1.8rem 0 1rem; }
+.experience-card ul { padding-left:2rem; }
+.education-note { margin-top:2rem; }
+.education-note p { margin-top:.5rem; }
+.skill-groups { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.6rem; margin:2rem 0 3rem; }
+.skill-group p { margin-top:1rem; }
+.project-category { grid-column:1/-1; margin:3rem 0 0; color:var(--color-light-blue); font:500 1.8rem "Fira Code",monospace; }
+.project-category-note { grid-column:1/-1; color:var(--color-gray); font-size:1.5rem; }
+.project-card-unlinked { display:block; width:100%; color:inherit; }
+.project-boxes-div > a[aria-disabled="true"] { cursor:default; }
+.project-boxes-div > a[aria-disabled="true"] .cta { opacity:.75; }
+.project-boxes-div img, .dp img { max-width:100%; height:auto; }
+@media (max-width: 760px) {
+  .experience-section { width:84%; }
+  .skill-groups { grid-template-columns:1fr; }
+  .experience-heading { flex-direction:column; gap:.6rem; }
+  .experience-heading span { white-space:normal; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+}
